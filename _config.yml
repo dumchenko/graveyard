@@ -10,3 +10,8 @@ plugins:
   - jekyll-feed
   - github-pages
   - jekyll-theme-minimal
+
+collections_dir: collections
+collections:
+  people:
+    output: true
