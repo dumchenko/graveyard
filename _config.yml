@@ -9,3 +9,4 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
   - github-pages
+  - jekyll-theme-minimal
