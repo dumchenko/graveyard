@@ -284,6 +284,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 3.9.2)
   jekyll-feed (~> 0.6)
+  jekyll-theme-minimal (~> 0.2.0)
   kramdown-parser-gfm
   minima (~> 2.0)
   tzinfo (~> 1.2)
