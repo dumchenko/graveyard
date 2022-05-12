@@ -32,6 +32,8 @@
 
       <h3>{{ page.birthDate }} - {{ page.deathDate }}</h3>
 
+      <p><img src="{{ "/assets/images/" | append: page.mainPhoto | relative_url }}" alt="" /></p>
+
       {{ content }}
 
     </section>
