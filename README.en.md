@@ -2,7 +2,7 @@
 
 Read in other languages: [Русский](README.md), [English](README.en.md)
 
-[This website on Github Pages](https://dumchenko.github.io/graveyard) allows us to tell stories about deceased members of our family.
+[This website on Github Pages](https://dumchenko.github.io/graveyard) allows us to tell story of our family deceased members.
 
 QR-code with link to this website will be printed on tombstone instead of any photos so any physical graveyard visitor will be able not only to see just dates and old photo but videos with this person and who they were to us.
 
