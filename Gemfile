@@ -22,6 +22,11 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "github-pages", "~> 226"
   gem "jekyll-theme-minimal", "~> 0.2.0"
+  gem "jekyll-figure", "~> 0.1.0"
+  gem "jekyll-webp", "~> 1.0"
+  gem "jekyll-loading-lazy", "~> 0.1.1"
+  gem "jekyll-timeago", "~> 0.14.0"
+  gem "premonition", "~> 4.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
