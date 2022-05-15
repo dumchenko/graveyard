@@ -10,8 +10,39 @@ plugins:
   - jekyll-feed
   - github-pages
   - jekyll-theme-minimal
+  - jekyll-figure
+  - jekyll-webp
+  - jekyll-loading-lazy
+  - jekyll-timeago
+  - premonition
 
 collections_dir: collections
 collections:
   people:
     output: true
+
+webp:
+  enabled: true
+  quality: 75
+  img_dir:
+    - assets/images
+  nested: true
+  formats:
+    - ".jpeg"
+    - ".jpg"
+    - ".png"
+    - ".tiff"
+
+  gifs:
+    - ".gif"
+
+  exclude: []
+
+  append_ext: true
+
+jekyll_timeago:
+  depth: 2
+  default_locale: ru
+  available_locales:
+    - en
+    - ru
