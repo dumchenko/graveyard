@@ -25,6 +25,7 @@ group :jekyll_plugins do
   gem "jekyll-loading-lazy", "~> 0.1.1"
   gem "jekyll-timeago", "~> 0.14.0"
   gem "premonition", "~> 4.0"
+  gem "jekyll-seo-tag", "~> 2.8"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

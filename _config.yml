@@ -11,6 +11,7 @@ plugins:
   - jekyll-loading-lazy
   - jekyll-timeago
   - premonition
+  - jekyll-seo-tag
 
 collections_dir: collections
 collections:
