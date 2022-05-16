@@ -43,9 +43,9 @@ carouselPhotos:
       <button class="nav-link p-2 border" id="nav-r3nic1e-tab" data-bs-toggle="tab" data-bs-target="#r3nic1e-tab" type="button" role="tab" aria-controls="nav-r3nic1e" aria-selected="false">
         Святослав Сергеевич Думченко, сын
       </button>
-      <button class="nav-link p-2 border" id="nav-elena-reksam-tab" data-bs-toggle="tab" data-bs-target="#elena-reksam-tab" type="button" role="tab" aria-controls="nav-elena-reksam" aria-selected="false">
+      {%- comment -%} <button class="nav-link p-2 border" id="nav-elena-reksam-tab" data-bs-toggle="tab" data-bs-target="#elena-reksam-tab" type="button" role="tab" aria-controls="nav-elena-reksam" aria-selected="false">
         Елена Анатольевна Думченко, жена
-      </button>
+      </button> {%- endcomment -%}
     </div>
   </nav>
 
