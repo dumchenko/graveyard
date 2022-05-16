@@ -2,21 +2,27 @@
 layout: default
 ---
 
-### Люди, которых мы потеряли:
+<div class="text-center">
+  <h1>Люди, которых мы потеряли:</h1>
+</div>
 
 <div class="container px-4">
   <div class="row row-cols-auto gx-5">
     {% for person in site.people %}
     <div class="col">
-      <div class="card col-md-4">
-        <img src="{{ person.mainPhoto | relative_url }}" class="img-fluid">
+      <div class="card col-md-4 text-center">
+        <img src="{{ person.mainPhoto | relative_url }}" class="img-fluid rounded">
         <div class="card-body col-sm">
           <h5 class="card-title">{{ person.name }}</h5>
           <div class="card-text">{{ person.birthDate }} - {{ person.deathDate }}</div>
           <br/>
-          <blockquote class="blockquote"><small class="text-muted">
-            Как много нашего ушло с тобой, как много твоего осталось с нами...
-          </small></blockquote>
+          <blockquote class="blockquote">
+            <small class="text-muted">
+              <em>
+                Как много нашего ушло с тобой, как много твоего осталось с нами...
+              </em>
+            </small>
+          </blockquote>
         </div>
         <a class="stretched-link" href="{{ person.url | relative_url }}"/>
       </div>
