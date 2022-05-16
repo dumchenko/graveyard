@@ -4,14 +4,19 @@ name: Думченко Сергей Николаевич
 birthDate: 13.06.1962
 deathDate: 05.11.2021
 mainPhoto: /assets/images/IMG_0204.jpeg
+carouselPhotos:
+  - /assets/images/2b9011a5-1aca-4397-ae62-74b6b19ce259.jpg
 ---
 
 <div class="container col-md-4">
   <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{{ page.mainPhoto | relative_url }}" class="img-fluid img-thumbnail d-block w-100">
+      {% assign photos = page.carouselPhotos | unshift: page.mainPhoto %}
+      {% for photo in photos %}
+      <div class="carousel-item {% if photo == page.mainPhoto %}active{% endif %}">
+        <img src="{{ photo | relative_url }}" class="img-fluid img-thumbnail d-block w-100">
       </div>
+      {% endfor %}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
