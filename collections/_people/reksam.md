@@ -5,7 +5,15 @@ birthDate: 13.06.1962
 deathDate: 05.11.2021
 mainPhoto: /assets/images/IMG_0204.jpeg
 carouselPhotos:
+  - /assets/images/IMG_6640.jpeg
+  - /assets/images/2020-03-09 13-42-27.jpeg
   - /assets/images/2b9011a5-1aca-4397-ae62-74b6b19ce259.jpg
+  - /assets/images/2020-03-09 13-42-47.jpeg
+  - /assets/images/IMG_0072.jpg
+  - /assets/images/IMG_6393.jpeg
+  - /assets/images/IMG_0118.jpeg
+  - /assets/images/IMG_0266.jpeg
+  - /assets/images/IMG_0303.jpeg
 ---
 
 <div class="container col-md-4">
