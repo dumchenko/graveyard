@@ -5,13 +5,9 @@ url: "https://dumchenko.github.io" # the base hostname & protocol for your site,
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
-  - github-pages
-  - jekyll-theme-minimal
-  - jekyll-figure
-  - jekyll-webp
+  # - jekyll-webp
   - jekyll-loading-lazy
   - jekyll-timeago
   - premonition
