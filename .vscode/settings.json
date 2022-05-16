@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.html": "jekyll",
+    "*.scss": "jekyll",
+    "*.md": "jekyll"
+  }
+}
