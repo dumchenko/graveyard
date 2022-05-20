@@ -3,18 +3,28 @@ layout: default
 name: Думченко Сергей Николаевич
 birthDate: 13.06.1962
 deathDate: 05.11.2021
-mainPhoto: /assets/images/IMG_0204.jpeg
+mainPhoto:
+  path: /assets/images/IMG_0204.jpeg
 carouselPhotos:
-  - /assets/images/IMG_6640.jpeg
-  - /assets/images/2020-03-09 13-42-27.jpeg
-  - /assets/images/2b9011a5-1aca-4397-ae62-74b6b19ce259.jpg
-  - /assets/images/2020-03-09 13-42-47.jpeg
-  - /assets/images/IMG_0072.jpg
-  - /assets/images/IMG_6393.jpeg
-  - /assets/images/IMG_0118.jpeg
-  - /assets/images/IMG_0266.jpeg
-  - /assets/images/IMG_0303.jpeg
-  - /assets/images/photo_2022-05-17 13.59.22.jpeg
+  - path: /assets/images/IMG_6640.jpeg
+    caption: Зеленогорск, 10.10.2020
+  - path: /assets/images/2020-03-09 13-42-27.jpeg
+    caption: "09.03.2020"
+  - path: /assets/images/2b9011a5-1aca-4397-ae62-74b6b19ce259.jpg
+  - path: /assets/images/2020-03-09 13-42-47.jpeg
+    caption: "09.03.2020"
+  - path: /assets/images/IMG_0072.jpg
+    caption: На дне рождении Елены Анатольевны Думченко, 27.02.2021
+  - path: /assets/images/IMG_6393.jpeg
+    caption: Золотая Долина, 05.09.2020
+  - path: /assets/images/IMG_0118.jpeg
+    caption: Первый Новый Год в новой квартире, 31.12.2003
+  - path: /assets/images/IMG_0266.jpeg
+    caption: Где-то в Финляндии, 06.07.2005
+  - path: /assets/images/IMG_0303.jpeg
+    caption: На пароме, вероятно, у Таллина, 12.01.2008
+  - path: /assets/images/photo_2022-05-17 13.59.22.jpeg
+    caption: КПП Чарли, Берлин, 14.08.2004
 ---
 
 <div class="container text-center">
@@ -28,7 +38,12 @@ carouselPhotos:
       {% assign photos = page.carouselPhotos | unshift: page.mainPhoto %}
       {% for photo in photos %}
       <div class="carousel-item {% if photo == page.mainPhoto %}active{% endif %}">
-        <img src="{{ photo | relative_url }}" class="img-fluid img-thumbnail d-block w-100">
+        <img src="{{ photo.path | relative_url }}" class="img-fluid img-thumbnail d-block w-100">
+        {% if photo.caption %}
+        <div class="carousel-caption d-block m-0 p-0">
+          <p class="m-0 p-0 font-weight-bold bg-light text-black">{{ photo.caption }}</p>
+        </div>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
