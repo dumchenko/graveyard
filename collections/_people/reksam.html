@@ -51,15 +51,13 @@ carouselPhotos:
 
     <div class="carousel-inner">
       {% for photo in photos %}
-      <div class="carousel-item {% if photo == page.mainPhoto %}active{% endif %}" style="height: 75vh" data-bs-interval="10000">
-        <figure class="figure" style="max-height: 95%">
-          <img src="{{ photo.path | relative_url }}" class="img-thumbnail d-block m-auto">
-          {% if photo.caption %}
-          <figcaption class="figure-caption text-center font-weight-bold text-black">
-              {{ photo.caption }}
-          </figcaption>
-          {% endif %}
-        </figure>
+      <div class="carousel-item {% if photo == page.mainPhoto %}active{% endif %}" style="height: 75vh;" data-bs-interval="10000">
+        <img src="{{ photo.path | relative_url }}" class="img-thumbnail d-block m-auto" style="max-height: 90%;">
+        {% if photo.caption %}
+        <div class="text-center">
+          <p class="font-weight-bold text-black">{{ photo.caption }}</p>
+        </div>
+        {% endif %}
       </div>
       {% endfor %}
 
