@@ -18,21 +18,13 @@ layout: default
           <br/>
           <blockquote class="blockquote">
             <small class="text-muted">
-              <em>
-                Как много нашего ушло с тобой, как много твоего осталось с нами...
-              </em>
+              <em>{{ person.epitaph }}</em>
             </small>
           </blockquote>
         </div>
-        <a class="stretched-link" href="{{ person.url | relative_url }}"/>
+        <a class="btn btn-primary stretched-link" href="{{ person.url | relative_url }}#start">Подробнее...</a>
       </div>
     </div>
     {% endfor %}
   </div>
-</div>
-
-<div class="fixed-bottom text-center">
-  <p class="h5 my-2">
-  Наше генеалогическое древо на <a href="https://www.myheritage.com/site-family-tree-78241683/family-site">myheritage.com</a>
-  </p>
 </div>
