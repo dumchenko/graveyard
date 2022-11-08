@@ -2,6 +2,18 @@
 layout: default
 name: Большеохтинское кладбище
 photos: []
+buried:
+  - name: Думченко Сергей Николаевич
+    link: people/reksam
+    birthDate: 13.06.1962
+    deathDate: 05.11.2021
+  - name: Ванюкова Нина Александровна
+    birthDate: 02.12.1934
+    deathDate: 07.03.2018
+  - name: Игнатьева Анна Андреевна
+    birthDate: 16.09.1925
+    deathDate: 03.09.2015
+
 ---
 
 <div class="container text-center" id="start">
@@ -23,6 +35,31 @@ photos: []
 
   <div class="container">
     <p class="display-6">Ориентиры</p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <p class="display-4">Похоронены</p>
+
+  <div class="container px-4 pt-3">
+    <div class="row row-cols-auto gx-5">
+      {% for buried in page.buried %}
+      <div class="col">
+        <div class="card col-md-4 text-center" style="width: 18rem;">
+          <div class="card-body col-sm">
+            <h5 class="card-title">{{ buried.name }}</h5>
+            <div class="card-text">{{ buried.birthDate }} - {{ buried.deathDate }}</div>
+            <br/>
+          </div>
+          {% if buried.link %}
+          <a class="btn btn-primary stretched-link" href="{{ buried.link | relative_url }}#start">Подробнее...</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
