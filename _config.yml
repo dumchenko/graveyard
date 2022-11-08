@@ -17,6 +17,8 @@ collections_dir: collections
 collections:
   people:
     output: true
+  graves:
+    output: true
 
 webp:
   enabled: true
