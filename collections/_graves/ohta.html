@@ -26,50 +26,90 @@ buried:
 </div>
 
 <div class="container">
-  <p class="display-4">Местоположение</p>
+  <p class="display-4 text-center">Местоположение</p>
 
-  <div class="ratio ratio-16x9">
-    <a href="https://yandex.ru/maps/org/bolsheokhtinskoye_kladbishche/141522873249/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Большеохтинское кладбище</a>
-    <a href="https://yandex.ru/maps/2/saint-petersburg/category/cemetery/184108357/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Кладбище в Санкт‑Петербурге</a>
-    <iframe src="https://yandex.ru/map-widget/v1/-/CCU6vQSjOD" allowfullscreen="true"></iframe>
-  </div>
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#yandexmaps" aria-expanded="false" aria-controls="yandexmaps">Яндекс Карты</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#googlemaps" aria-expanded="false" aria-controls="googlemap">Google Maps</button>
+  </p>
 
-  <div class="ratio ratio-16x9">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6150.253468733171!2d30.426573999576274!3d59.947546784857465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f679cff3ed%3A0xc0df68d3fa9efac5!2sBol&#39;sheokhtinskoye%20Kladbishche!5e1!3m2!1sen!2sru!4v1667891713180!5m2!1sen!2sru"loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-
-  <div class="container">
-    <p class="display-6">Как найти</p>
-
-    <div class="container">
-      <p class="h4">Могила Ванюковой Нины Александровны</p>
-      <p><strong>К этой могиле бывает тяжело добраться, когда много воды или снега. Лучше приходить в летнее время.</strong></p>
-      <p>
-        От основного входа (с пр. Металлистов) идем сразу налево вдоль ворот и администрации. В конце здания администрации поворачиваем направо на Олонецкую дорожку.
-      </p>
-      <p>
-        Сворачиваем налево на Кахетинскую дорожку (после Онежской и Галицкой дорожек и перед Мезенской и Углической дорожками).
-      </p>
-      <p>
-        Где-то с левой стороны (допишем).
-      </p>
+  <div class="row">
+    <div class="collapse ratio ratio-4x3" id="yandexmaps">
+      <a href="https://yandex.ru/maps/org/bolsheokhtinskoye_kladbishche/141522873249/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Большеохтинское кладбище</a>
+      <a href="https://yandex.ru/maps/2/saint-petersburg/category/cemetery/184108357/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Кладбище в Санкт‑Петербурге</a>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCU6vQSjOD" allowfullscreen="true"></iframe>
     </div>
 
-    <div class="container">
-      <p class="h4">Могила Игнатьевой Анны Андреевны</p>
+    <div class="collapse ratio ratio-4x3" id="googlemaps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6150.253468733171!2d30.426573999576274!3d59.947546784857465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f679cff3ed%3A0xc0df68d3fa9efac5!2sBol&#39;sheokhtinskoye%20Kladbishche!5e1!3m2!1sen!2sru!4v1667891713180!5m2!1sen!2sru"loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+  </div>
 
-    <div class="container">
-      <p class="h4">Могила Думченко Сергея Николаевича</p>
-      <p>
-        Участок называется "Речной". От основного входа (с пр. Металлистов) идем вдоль левой стороны церкви по Московской дорожке, на раздвоении идем на правую Харьковскую дорожку, затем сворачиваем направо к мосту (Бородинская дорожка).
-      </p>
-      <p>
-        В начале моста слева есть лестница вниз - спускаемся по ней и попадаем в начало Речного участка (сам участок будет по левую руку). Идем по участку до бетонных оснований справа и изгиба участка налево.
-      </p>
-      <p>
-        Могила находится в следующем ряду после изгиба вторая слева.
-      </p>
+  <div class="container p-5">
+    <p class="display-6 text-center">Как найти</p>
+
+    <div class="accordion p-3" id="accordionGrave">
+      <div class="accordion-item">
+        <p class="accordion-header h4" id="collapseGrave0Heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrave0" aria-expanded="false" aria-controls="collapseGrave0">
+            Могила Ванюковой Нины Александровны
+          </button>
+        </p>
+        <div id="collapseGrave0" class="accordion-collapse collapse" aria-labelledby="collapseGrave0Heading" data-bs-parent="#accordionGrave">
+          <div class="accordion-body">
+            <p class="alert alert-warning">
+              К этой могиле бывает тяжело добраться, когда много воды или снега. Лучше приходить в летнее время.
+            </p>
+            <p>
+              От основного входа (с пр. Металлистов) идем сразу налево вдоль ворот и администрации. В конце здания администрации поворачиваем направо на Олонецкую дорожку.
+            </p>
+            <p>
+              Сворачиваем налево на Кахетинскую дорожку (после Онежской и Галицкой дорожек и перед Мезенской и Углической дорожками).
+            </p>
+            <p>
+              Где-то с левой стороны (допишем).
+              <div class="spinner-border" role="status"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <p class="accordion-header h4" id="collapseGrave1Heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrave1" aria-expanded="false" aria-controls="collapseGrave1">
+            Могила Игнатьевой Анны Андреевны
+          </button>
+        </p>
+        <div id="collapseGrave1" class="accordion-collapse collapse" aria-labelledby="collapseGrave1Heading" data-bs-parent="#accordionGrave">
+          <div class="accordion-body">
+            <p>
+              Еще не написали.
+              <div class="spinner-border" role="status"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <p class="accordion-header h4" id="collapseGrave2Heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrave2" aria-expanded="false" aria-controls="collapseGrave2">
+            Могила Думченко Сергея Николаевича
+          </button>
+        </p>
+        <div id="collapseGrave2" class="accordion-collapse collapse" aria-labelledby="collapseGrave2Heading" data-bs-parent="#accordionGrave">
+          <div class="accordion-body">
+            <p>
+              Участок называется "Речной". От основного входа (с пр. Металлистов) идем вдоль левой стороны церкви по Московской дорожке, на раздвоении идем по правой (Харьковской) дорожке, затем сворачиваем направо к мосту (Бородинская дорожка).
+            </p>
+            <p>
+              В начале моста слева есть лестница вниз - спускаемся по ней и попадаем в начало Речного участка (сам участок будет по левую руку). Идем по участку до бетонных оснований справа и изгиба участка налево.
+            </p>
+            <p>
+              Могила находится в следующем ряду после изгиба вторая слева.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -77,7 +117,7 @@ buried:
 <hr>
 
 <div class="container">
-  <p class="display-4">Похоронены</p>
+  <p class="display-4 text-center">Похоронены</p>
 
   <div class="container px-4 pt-3">
     <div class="row row-cols-auto g-3">
@@ -102,11 +142,11 @@ buried:
 <hr>
 
 <div class="container">
-  <p class="display-4">Фотографии</p>
+  <p class="display-4 text-center">Фотографии</p>
 
   {% for photo in page.photos %}
   <figure class="figure">
-    <img src="{{ photo.path | relative_url }}" class="figure-img img-fluid rounded" style="height: 90vh;">
+    <img src="{{ photo.path | relative_url }}" class="figure-img img-fluid rounded" style="max-height: 90vh;">
     {% if photo.caption %}
     <figcaption class="figure-caption text-center font-weight-bold text-black">
       {{ photo.caption }}
