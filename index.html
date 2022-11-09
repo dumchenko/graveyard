@@ -10,7 +10,7 @@ layout: default
   <div class="row row-cols-auto g-5">
     {% for person in site.people %}
     <div class="col">
-      <div class="card col-md-4 text-center">
+      <div class="card col-md-4 text-center shadow-lg" style="width: 18rem;">
         <img src="{{ person.mainPhoto.path | relative_url }}" class="img-fluid rounded">
         <div class="card-body col-sm">
           <h5 class="card-title">{{ person.name }}</h5>
@@ -21,8 +21,9 @@ layout: default
               <em>{{ person.epitaph }}</em>
             </small>
           </blockquote>
+
+          <a class="btn btn-primary stretched-link w-100" href="{{ person.url | relative_url }}#start">Подробнее...</a>
         </div>
-        <a class="btn btn-primary stretched-link" href="{{ person.url | relative_url }}#start">Подробнее...</a>
       </div>
     </div>
     {% endfor %}
@@ -39,12 +40,11 @@ layout: default
   <div class="row row-cols-auto g-5">
     {% for grave in site.graves %}
     <div class="col">
-      <div class="card col-md-4 text-center" style="width: 18rem;">
+      <div class="card col-md-4 text-center shadow-lg" style="width: 18rem;">
         <div class="card-body col-sm">
           <h5 class="card-title">{{ grave.name }}</h5>
-          <br/>
+          <a class="btn btn-primary stretched-link w-100" href="{{ grave.url | relative_url }}#start">Подробнее...</a>
         </div>
-        <a class="btn btn-primary stretched-link" href="{{ grave.url | relative_url }}#start">Подробнее...</a>
       </div>
     </div>
     {% endfor %}
