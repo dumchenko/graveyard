@@ -21,23 +21,37 @@ buried:
 </div>
 
 <div class="container">
-  <p class="display-4">Местоположение</p>
+  <p class="display-4 text-center">Местоположение</p>
 
-  <div class="ratio ratio-16x9">
-    <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
-    <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.360218%2C59.881760&mode=search&sll=30.360096%2C59.883801&text=59.883801%2C30.360096&utm_medium=mapframe&utm_source=maps&z=15.92" style="color:#eee;font-size:12px;position:absolute;top:14px;">Ново-Волковское кладбище — Яндекс Карты</a>
-    <iframe src="https://yandex.ru/map-widget/v1/-/CCU6vIbF1B" allowfullscreen="true"></iframe>
-  </div>
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#yandexmaps" aria-expanded="false" aria-controls="yandexmaps">Яндекс Карты</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#googlemaps" aria-expanded="false" aria-controls="googlemap">Google Maps</button>
+  </p>
 
-  <div class="ratio ratio-16x9">
+  <div class="row">
+    <div class="collapse ratio ratio-4x3" id="yandexmaps">
+      <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+      <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.360218%2C59.881760&mode=search&sll=30.360096%2C59.883801&text=59.883801%2C30.360096&utm_medium=mapframe&utm_source=maps&z=15.92" style="color:#eee;font-size:12px;position:absolute;top:14px;">Ново-Волковское кладбище — Яндекс Карты</a>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCU6vIbF1B" allowfullscreen="true"></iframe>
+    </div>
+
+    <div class="collapse ratio ratio-4x3" id="googlemaps">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.005594067883!2d30.35728381642311!3d59.882079331855685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696301ea9632fd1%3A0x43adc5784632e90b!2sVolkovskoye%20Municipal%20Okrug%2C%20St%20Petersburg%2C%20192102!5e1!3m2!1sen!2sru!4v1667890634520!5m2!1sen!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 
   <div class="container">
-    <p class="display-6">Как найти</p>
-    <p><strong>Во время ковидных ограничений вход со стороны Козловского пер. был заварен и надо было идти с другой стороны.</strong></p>
+    <p class="display-6 text-center">Как найти</p>
+    <div class="alert alert-warning">
+      <p>
+        Во время ковидных ограничений вход со стороны Козловского пер. был заварен и надо было идти с другой стороны.
+      </p>
+      <p>
+        Также при входе есть большой перепад высот, поэтому в скользкое и мокрое время нужно быть предельно осторожным.
+      </p>
+    </div>
     <p>
-      Заходим с пересечения Козловского пер. и Стрельбищенской ул. Проходим между желтым двухэтажным зданием и бетонной стеной и пролезаем через дырку в заборе. <strong>Тут перепад высот и можно легко упасть.</strong>
+      Заходим с пересечения Козловского пер. и Стрельбищенской ул. Проходим между желтым двухэтажным зданием и бетонной стеной и пролезаем через дырку в заборе.
     </p>
     <p>
       Попадаем сразу на дорожку и идем по ней (на запад) до первого пересечения. На пересечении сворачиваем направо.
@@ -52,7 +66,7 @@ buried:
 <hr>
 
 <div class="container">
-  <p class="display-4">Похоронены</p>
+  <p class="display-4 text-center">Похоронены</p>
 
   <div class="container px-4 pt-3">
     <div class="row row-cols-auto g-3">
@@ -77,11 +91,11 @@ buried:
 <hr>
 
 <div class="container">
-  <p class="display-4">Фотографии</p>
+  <p class="display-4 text-center">Фотографии</p>
 
   {% for photo in page.photos %}
   <figure class="figure">
-    <img src="{{ photo.path | relative_url }}" class="figure-img img-fluid rounded" style="height: 90vh;">
+    <img src="{{ photo.path | relative_url }}" class="figure-img img-fluid rounded" style="max-height: 90vh;">
     {% if photo.caption %}
     <figcaption class="figure-caption text-center font-weight-bold text-black">
       {{ photo.caption }}
