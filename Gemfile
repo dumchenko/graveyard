@@ -20,7 +20,6 @@ gem "minima", "~> 2.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-webp", "~> 1.0"
   gem "jekyll-loading-lazy", "~> 0.1.1"
   gem "jekyll-timeago", "~> 0.14.0"
   gem "premonition", "~> 4.0"
