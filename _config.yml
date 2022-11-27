@@ -7,7 +7,6 @@ url: "https://dumchenko.github.io" # the base hostname & protocol for your site,
 markdown: kramdown
 plugins:
   - jekyll-feed
-  # - jekyll-webp
   - jekyll-loading-lazy
   - jekyll-timeago
   - premonition
@@ -19,25 +18,6 @@ collections:
     output: true
   graves:
     output: true
-
-webp:
-  enabled: true
-  quality: 75
-  img_dir:
-    - assets/images
-  nested: true
-  formats:
-    - ".jpeg"
-    - ".jpg"
-    - ".png"
-    - ".tiff"
-
-  gifs:
-    - ".gif"
-
-  exclude: []
-
-  append_ext: true
 
 jekyll_timeago:
   depth: 2
