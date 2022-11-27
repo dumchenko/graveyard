@@ -30,34 +30,30 @@ layout: default
 </div>
 
 <div class="container">
-    {{ content }}
-</div>
-
-<hr>
-
-<div class="container">
-    <p class="display-4 text-center">Похоронены</p>
+    <p class="display-4 text-center">Могилы</p>
 
     <div class="container px-4 pt-3">
         <div class="row row-cols-auto g-3">
-            {% for buried in page.buried %}
+            {% assign this_collection = page.id | split: "/" | last %}
+            {% assign graves = site.graves | where: "graveyard", this_collection %}
+            {% for grave in graves %}
             <div class="col">
                 <div class="card col-md-4 text-center" style="width: 18rem;">
                     <div class="card-body col-sm">
-                        <h5 class="card-title">{{ buried.name }}</h5>
-                        <div class="card-text">{{ buried.birthDate }} - {{ buried.deathDate }}</div>
-                        <br/>
+                        <h5 class="card-title">{{ grave.name }}</h5>
                     </div>
-                    {% if buried.link %}
-                    <a class="btn btn-primary stretched-link" href="{{ buried.link | relative_url }}#start">Подробнее...</a>
-                    {% endif %}
+                    <a class="btn btn-primary stretched-link w-100" href="{{ grave.url | relative_url }}#start">Подробнее...</a>
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
 </div>
+<div class="container">
+    {{ content }}
+</div>
 
+{% if page.photos %}
 <hr>
 
 <div class="container px-4 pt-3">
@@ -69,7 +65,7 @@ layout: default
             <figure class="figure">
                 <img src="{{ photo.path | relative_url }}" class="figure-img img-fluid rounded" style="max-height: 90vh; width: 35rem;">
                 {% if photo.caption %}
-                <figcaption class="figure-caption text-center font-weight-bold text-black">
+                <figcaption class="figure-caption text-center font-weight-bold">
                     {{ photo.caption }}
                 </figcaption>
                 {% endif %}
@@ -78,3 +74,4 @@ layout: default
         {% endfor %}
     </div>
 </div>
+{% endif %}
