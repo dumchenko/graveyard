@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="container text-center" id="start">
+    <h1 class="display-3">{{ page.name }}</h1>
+    <p class="display-6 text-muted">{{ page.birthDate }} - {{ page.deathDate }}</p>
+</div>
+
+<div class="container">
+    <div id="carousel" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+        {% assign photos = page.carouselPhotos | unshift: page.mainPhoto %}
+        <div class="carousel-indicators">
+            {% for photo in photos %}
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="{{ forloop.index0 }}" class="{% if photo == page.mainPhoto %}active{% endif %}" aria-current="{% if photo == page.mainPhoto %}true{% endif %}" aria-label="Photo {{ forloop.index }}"></button>
+            {% endfor %}
+        </div>
+
+        <div class="carousel-inner">
+            {% for photo in photos %}
+            <div class="carousel-item {% if photo == page.mainPhoto %}active{% endif %}" style="height: 75vh;" data-bs-interval="10000">
+                <img src="{{ photo.path | relative_url }}" class="img-thumbnail d-block m-auto" style="max-height: 90%;">
+                {% if photo.caption %}
+                <div class="text-center">
+                    <p class="font-weight-bold text-black">{{ photo.caption }}</p>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+{{ content }}
