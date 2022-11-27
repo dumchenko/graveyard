@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: people
 name: Думченко Сергей Николаевич
 birthDate: 13.06.1962
 deathDate: 05.11.2021
@@ -35,51 +35,11 @@ carouselPhotos:
     caption: КПП Чарли, Берлин, 14.08.2004
 ---
 
-<div class="container text-center" id="start">
-  <h1 class="display-3">{{ page.name }}</h1>
-  <p class="display-6 text-muted">{{ page.birthDate }} - {{ page.deathDate }}</p>
-</div>
-
-<div class="container">
-  <div id="carousel" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
-    {% assign photos = page.carouselPhotos | unshift: page.mainPhoto %}
-    <div class="carousel-indicators">
-      {% for photo in photos %}
-      <button type="button" data-bs-target="#carousel" data-bs-slide-to="{{ forloop.index0 }}" class="{% if photo == page.mainPhoto %}active{% endif %}" aria-current="{% if photo == page.mainPhoto %}true{% endif %}" aria-label="Photo {{ forloop.index }}"></button>
-      {% endfor %}
-    </div>
-
-    <div class="carousel-inner">
-      {% for photo in photos %}
-      <div class="carousel-item {% if photo == page.mainPhoto %}active{% endif %}" style="height: 75vh;" data-bs-interval="10000">
-        <img src="{{ photo.path | relative_url }}" class="img-thumbnail d-block m-auto" style="max-height: 90%;">
-        {% if photo.caption %}
-        <div class="text-center">
-          <p class="font-weight-bold text-black">{{ photo.caption }}</p>
-        </div>
-        {% endif %}
-      </div>
-      {% endfor %}
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<hr>
-
 <div class="container bg-body rounded d-grid gap-5">
   <h3 class="text-center display-4">Последние слова от семьи</h3>
 
   <nav class="p-2">
-    <div class="nav nav-tabs bg-light flex-column d-grid gap-3" id="nav-tab" role="tablist">
+    <div class="nav nav-tabs bg-transparent flex-column d-grid gap-3" id="nav-tab" role="tablist">
       <button class="nav-link border rounded shadow p-2" id="nav-r3nic1e-tab" data-bs-toggle="tab" data-bs-target="#r3nic1e-tab" type="button" role="tab" aria-controls="nav-r3nic1e" aria-selected="false">
         Святослав Сергеевич Думченко, сын
       </button>
@@ -141,7 +101,7 @@ carouselPhotos:
 <div class="container bg-body rounded d-grid gap-4">
   <h3 class="text-center display-4">Воспоминания от семьи</h3>
 
-  <div class="container bg-light shadow border p-4">
+  <div class="container bg-transparent shadow border p-4">
     <figure>
       <blockquote>
         <p class="lead text-center display-6">Знания языков</p>
@@ -165,7 +125,7 @@ carouselPhotos:
     </figure>
   </div>
 
-  <div class="container bg-light shadow border p-4">
+  <div class="container bg-transparent shadow border p-4">
     <figure>
       <blockquote>
         <p class="lead text-center display-6">Физика в суде</p>
@@ -187,7 +147,7 @@ carouselPhotos:
     </figure>
   </div>
 
-  <div class="container bg-light shadow border p-4">
+  <div class="container bg-transparent shadow border p-4">
     <figure>
       <blockquote>
         <p class="lead text-center display-6">Корабль "Васа"</p>
@@ -215,7 +175,7 @@ carouselPhotos:
     </figure>
   </div>
 
-  <div class="container bg-light shadow border p-4">
+  <div class="container bg-transparent shadow border p-4">
     <figure>
       <blockquote>
         <p class="lead text-center display-6">Именование всего</p>
