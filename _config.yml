@@ -18,6 +18,8 @@ collections:
     output: true
   graves:
     output: true
+  graveyards:
+    output: true
 
 jekyll_timeago:
   depth: 2
