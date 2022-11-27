@@ -43,7 +43,6 @@ GEM
       mini_i18n (>= 0.8.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll-webp (1.0.0)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -97,7 +96,6 @@ DEPENDENCIES
   jekyll-loading-lazy (~> 0.1.1)
   jekyll-seo-tag (~> 2.8)
   jekyll-timeago (~> 0.14.0)
-  jekyll-webp (~> 1.0)
   kramdown-parser-gfm
   minima (~> 2.0)
   premonition (~> 4.0)
