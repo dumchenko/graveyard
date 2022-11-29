@@ -17,20 +17,20 @@ jobs:
         with:
           lfs: true
 
-      - name: Set Node.js 16.x
+      - name: Set up Node.js 16.x
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
 
       - name: Run install
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Build site
         run: yarn generate
 
-      - name: Deploy to GitHub Pages
+      - name: Upload to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
