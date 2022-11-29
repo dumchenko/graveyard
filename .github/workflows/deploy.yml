@@ -24,9 +24,7 @@ jobs:
           cache: yarn
 
       - name: Run install
-        run: |
-          yarn set version stable
-          yarn install
+        run: yarn install
 
       - name: Build site
         run: yarn generate
