@@ -6,13 +6,14 @@ on:
       - main
 
 jobs:
-  jekyll:
+  nuxt:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # for cache
       pages: write
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           lfs: true
 
@@ -20,16 +21,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          cache: yarn
 
       - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
+        run: |
+          yarn set version stable
+          yarn install
 
       - name: Build site
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: generate
+        run: yarn generate
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
