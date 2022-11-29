@@ -1,6 +1,16 @@
-_site
-.sass-cache
-.jekyll-metadata
-.jekyll-cache
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
 
-vendor/bundle
+# Yarn
+.yarn/
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
