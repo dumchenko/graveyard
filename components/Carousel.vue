@@ -50,9 +50,9 @@
 <script>
   export default {
     name: "Carousel",
-    props: [
-        "id",
-        "photos",
-    ],
+    props: {
+      id: String,
+      photos: Array[Object],
+    },
   }
 </script>
