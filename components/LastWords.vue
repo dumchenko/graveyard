@@ -40,8 +40,11 @@
 <script>
 export default {
   name: "LastWords",
-  props: [
-      "items",
-  ],
+  props: {
+    items: {
+      type: Array[Object],
+      required: true,
+    },
+  },
 }
 </script>

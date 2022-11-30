@@ -26,8 +26,11 @@
 <script>
 export default {
   name: "Memories",
-  props: [
-      "items",
-  ]
+  props: {
+    items: {
+      type: Array[Object],
+      required: true,
+    },
+  },
 }
 </script>
