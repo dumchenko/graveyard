@@ -1,0 +1,1 @@
+import{a as e,o as n,b as s}from"./entry.518e0179.js";const o={name:"Spinner"},r={class:"spinner-border",role:"status"};function t(a,c,p,_,i,d){return n(),s("div",r)}const l=e(o,[["render",t]]);export{l as default};

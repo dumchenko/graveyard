@@ -1,1 +1,0 @@
-import{a as t,o,b as s,r as a}from"./entry.aa320aa5.js";const r={},c={class:"container"};function n(e,l){return o(),s("div",c,[a(e.$slots,"default")])}const f=t(r,[["render",n]]);export{f as default};
