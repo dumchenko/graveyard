@@ -1,5 +1,5 @@
 <template>
-  <p :class="['alert', `alert-${type}`]">
+  <p :class="['alert']">
     <slot />
   </p>
 </template>
@@ -7,8 +7,5 @@
 <script>
 export default {
   name: "Alert",
-  props: [
-      "type",
-  ],
 }
 </script>

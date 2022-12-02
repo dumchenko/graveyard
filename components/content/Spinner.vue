@@ -1,5 +1,5 @@
 <template>
-  <div class="spinner-border" role="status"></div>
+  <span class="animate-spin"></span>
 </template>
 
 <script>
