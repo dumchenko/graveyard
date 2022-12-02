@@ -22,14 +22,14 @@ const buried = [
 
 <template>
   <div class="container text-center" id="start">
-    <h1 class="display-3">{{ page.name }}</h1>
+    <h1>{{ page.name }}</h1>
     <br>
   </div>
 
   <div v-if="directions">
-    <p class="display-4 text-center">
+    <h2 class="text-center">
       Как найти
-    </p>
+    </h2>
     <div class="container">
       <ContentRenderer :value="directions"/>
     </div>
@@ -37,9 +37,9 @@ const buried = [
   </div>
 
   <div v-if="buried.length" class="container">
-    <p class="display-4 text-center">
+    <h2 class="text-center">
       Похоронены
-    </p>
+    </h2>
 
     <CardRows :items="buried">
       <template #image="item">
@@ -71,9 +71,9 @@ const buried = [
 
   <div v-if="'photos' in page" class="container">
     <hr>
-    <p class="display-4 text-center">
+    <h2 class="text-center">
       Фотографии
-    </p>
+    </h2>
     <Carousel :photos="page.photos" :id="pageID"/>
   </div>
 </template>

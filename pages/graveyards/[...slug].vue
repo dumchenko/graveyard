@@ -1,10 +1,10 @@
 <template>
   <NavBar/>
-  <main class="page-content py-5 flex-shrink-0" aria-label="Content">
+  <div class="container mx-auto">
     <NuxtLayout>
       <ContentDoc/>
     </NuxtLayout>
-  </main>
+  </div>
   <Footer/>
 </template>
 
