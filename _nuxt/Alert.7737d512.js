@@ -1,0 +1,1 @@
+import{a,o as r,b as s,r as o,e as l}from"./entry.48a9ba95.js";const n={name:"Alert",props:["type"]};function c(e,p,t,f,_,d){return r(),s("p",{class:l(["alert",`alert-${t.type}`])},[o(e.$slots,"default")],2)}const i=a(n,[["render",c]]);export{i as default};
