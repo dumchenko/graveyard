@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div id="carousel" class="carousel carousel-dark carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
-        <div v-if="photos.length > 1" class="carousel-indicators">
+    <div id="carousel" class="carousel" data-carousel="slide">
+      <div v-if="photos.length > 1" class="carousel-indicators">
         <button
             v-for="(photo, index) in photos"
             type="button"
@@ -48,11 +48,11 @@
 </template>
 
 <script>
-  export default {
-    name: "Carousel",
-    props: {
-      id: String,
-      photos: Array[Object],
-    },
-  }
+export default {
+  name: "Carousel",
+  props: {
+    id: String,
+    photos: Array[Object],
+  },
+}
 </script>
