@@ -1,25 +1,28 @@
+<script setup>
+const slots = useSlots()
+</script>
+
 <template>
-  <div class="container px-4 pt-3">
-    <div class="row row-cols-auto g-5">
-      <div v-for="item in items" class="col">
-        <div class="card col-md-4 text-center shadow-lg" style="width: 18rem;">
-          <slot name="image" v-bind="item" />
-          <div class="card-body col-sm">
-            <h5 class="card-title">
-              <slot name="title" v-bind="item" />
+  <div class="container mx-auto">
+    <div class="columns-auto gap-6">
+      <div v-for="item in items" class="column">
+          <div class="card">
+            <slot name="image" v-bind="item"/>
+            <h5 v-if="!!slots.title" class="card-title">
+              <slot name="title" v-bind="item"/>
             </h5>
-            <div class="card-text">
-              <slot name="text" v-bind="item" />
+            <div v-if="!!slots.text" class="card-text">
+              <slot name="text" v-bind="item"/>
             </div>
+            <LazyNuxtLink
+                v-if="'_path' in item && !disableLinks"
+                class="btn stretched-link"
+                v-bind:to="`${item._path}#start`"
+                prefetch
+            >
+              Подробнее...
+            </LazyNuxtLink>
           </div>
-          <a
-              v-if="'_path' in item"
-              class="btn btn-primary stretched-link"
-              :href="`${item._path}#start`"
-          >
-            Подробнее...
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -33,6 +36,11 @@ export default {
       type: Array[Object],
       required: true,
     },
+    disableLinks: {
+      type: Boolean,
+      default: false,
+      required: false,
+    }
   },
 }
 </script>

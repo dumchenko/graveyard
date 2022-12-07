@@ -8,27 +8,29 @@
         v-for="item in items"
         class="container bg-transparent shadow border p-4"
     >
-      <figure>
-        <blockquote>
-          <p class="lead text-center display-6">
-            {{ item.title }}
-          </p>
-          <ContentRenderer :value="item" />
-        </blockquote>
-        <figcaption class="blockquote-footer text-end">
-          {{ ('relation' in item) ? `${item.author}, ${item.relation}` : item.author }}
-        </figcaption>
-      </figure>
+      <div>
+        <h2 class="text-center">
+          {{ item.title }}
+        </h2>
+        <ContentRenderer :value="item"/>
+      </div>
+      <figcaption class="blockquote-footer text-end text-neutral-500">
+        {{ ('relation' in item) ? `${item.author}, ${item.relation}` : item.author }}
+      </figcaption>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "Memories",
   props: {
     items: {
-      type: Array[Object],
+      type: Array < {
+        author: String,
+        relation: String,
+        title: String,
+      } >,
       required: true,
     },
   },

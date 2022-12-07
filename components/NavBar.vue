@@ -1,11 +1,9 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-      <div class="container">
+    <nav>
         <a class="navbar-brand" href="/">
           Место упокоения семьи Думченко
         </a>
-      </div>
     </nav>
   </header>
 </template>
