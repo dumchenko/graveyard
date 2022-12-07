@@ -1,7 +1,4 @@
 <script setup>
-import Carousel from "~/components/Carousel.vue";
-import LastWords from "~/components/LastWords.vue";
-
 const {path, params} = useRoute()
 let pathParts = path.split("/")
 pathParts.shift()
@@ -25,7 +22,7 @@ const memories = await queryContent(...pathParts).where({_partial: true, _dir: "
     <br>
   </div>
 
-  <Carousel v-if="page.photos" :photos="page.photos" :id="pageID"/>
+  <Gallery v-if="page.photos" :photos="page.photos" :id="pageID"/>
   <LastWords v-if="lastWords" :items="lastWords"/>
   <Memories v-if="memories" :items="memories"/>
 </template>

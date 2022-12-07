@@ -19,10 +19,9 @@
     @apply antialiased;
   }
 
-  header {
+  header, footer {
     @apply bg-neutral-600;
     @apply py-3 lg:py-5;
-    @apply mb-10;
 
     nav {
       @apply mx-[8%];
@@ -31,8 +30,17 @@
     }
   }
 
+  header {
+    @apply mb-10;
+  }
+
+  footer {
+    @apply sticky bottom-0;
+    @apply w-screen;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply mt-3 lg:mt-6;
+    @apply my-3 lg:my-6;
   }
 
   h1 {
@@ -43,7 +51,7 @@
     @apply text-3xl lg:text-5xl font-light;
   }
 
-  .columns-auto {
+  .columns-auto, .columns-1 {
     @apply justify-center mx-auto;
     @apply flex flex-wrap;
   }
@@ -63,14 +71,14 @@
 
     @apply text-center;
 
-    .card-title {
+    .card-title:not(:empty) {
       @apply mt-4;
       @apply px-10 pb-2;
 
       @apply text-2xl;
     }
 
-    .card-text {
+    .card-text:not(:empty) {
       @apply m-2;
     }
   }
@@ -117,17 +125,29 @@
     @apply m-3;
   }
 
-  .carousel {
-    @apply relative;
+  .modal {
+    @apply fixed z-20 left-0 top-0;
+    @apply w-screen h-screen;
+    @apply bg-black/90 justify-center items-center;
+    @apply hidden;
 
-    .carousel-indicators {
-      button {
-        @apply flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer focus:outline-none;
-      }
+    img {
+      @apply block absolute;
+      @apply max-h-screen max-w-full;
+      @apply p-5;
     }
+  }
 
-    .carousel-inner {
-      @apply relative w-full overflow-hidden;
-    }
+  .modal-active {
+    @apply flex;
+  }
+
+  ul {
+    @apply list-disc;
+    @apply mx-8;
+  }
+
+  code {
+    @apply text-emerald-400;
   }
 }

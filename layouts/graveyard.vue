@@ -74,16 +74,6 @@ const graves = await queryContent("graves").where({graveyard: pageID}).find()
       </template>
     </CardRows>
   </div>
-
-
-  <div v-if="'photos' in page" class="container px-4 pt-3">
-    <hr>
-    <p class="display-4 text-center">
-      Фотографии
-    </p>
-
-    <Carousel :photos="page.photos" :id="pageID"/>
-  </div>
 </template>
 
 <script>
