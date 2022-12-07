@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     modules: [
         "@nuxt/content",
         "@nuxtjs/tailwindcss",
-        "nuxt-purgecss",
+        // "nuxt-purgecss",
     ],
     content: {
         documentDriven: true,
