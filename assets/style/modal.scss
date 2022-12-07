@@ -1,0 +1,18 @@
+@layer base {
+  .modal {
+    @apply fixed z-20 left-0 top-0;
+    @apply w-screen h-screen;
+    @apply bg-black/90 justify-center items-center;
+    @apply hidden;
+
+    img {
+      @apply block absolute;
+      @apply max-h-screen max-w-full;
+      @apply p-5;
+    }
+  }
+
+  .modal-active {
+    @apply flex;
+  }
+}

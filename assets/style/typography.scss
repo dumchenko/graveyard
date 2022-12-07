@@ -1,0 +1,40 @@
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  header, footer {
+    nav {
+      @apply text-lg lg:text-3xl;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply my-3 lg:my-6;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-6xl font-extralight;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-5xl font-light;
+  }
+
+  blockquote {
+    @apply font-medium italic text-gray-400;
+  }
+
+  p {
+    @apply m-3;
+  }
+
+  ul {
+    @apply list-disc;
+    @apply mx-8;
+  }
+
+  code {
+    @apply text-emerald-400;
+  }
+}

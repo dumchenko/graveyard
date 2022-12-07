@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "card";
+@import "modal";
+@import "typography";
+
 @layer base {
   html {
     @apply bg-neutral-800;
     @apply text-white;
-    @apply antialiased;
   }
 
   header, footer {
@@ -16,7 +19,6 @@
     nav {
       @apply mx-[8%];
       @apply flex;
-      @apply text-lg lg:text-3xl;
     }
   }
 
@@ -29,18 +31,6 @@
     @apply w-screen;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply my-3 lg:my-6;
-  }
-
-  h1 {
-    @apply text-4xl lg:text-6xl font-extralight;
-  }
-
-  h2 {
-    @apply text-3xl lg:text-5xl font-light;
-  }
-
   .columns-auto, .columns-1 {
     @apply justify-center mx-auto;
     @apply flex flex-wrap;
@@ -50,45 +40,8 @@
     @apply flex-shrink-0;
   }
 
-  .card {
-    @apply block;
-    @apply border border-solid border-slate-700;
-    @apply rounded-2xl;
-    @apply shadow-2xl;
-    @apply max-w-xs;
-
-    @apply relative; // for stretched links to work
-
-    @apply text-center;
-
-    img {
-      @apply rounded-t-2xl;
-    }
-
-    .card-title:not(:empty) {
-      @apply mt-4;
-      @apply px-10 pb-2;
-
-      @apply text-2xl;
-    }
-
-    .card-text:not(:empty) {
-      @apply m-2;
-    }
-
-    a {
-      @apply rounded-t-none;
-    }
-  }
-
-  .card-link {
-    @apply cursor-pointer;
-  }
-
   blockquote {
     @apply m-6;
-
-    @apply font-medium italic text-gray-400;
   }
 
   .stretched-link::after {
@@ -125,35 +78,5 @@
     @apply rounded;
     @apply bg-yellow-800;
     @apply p-6;
-  }
-
-  p {
-    @apply m-3;
-  }
-
-  .modal {
-    @apply fixed z-20 left-0 top-0;
-    @apply w-screen h-screen;
-    @apply bg-black/90 justify-center items-center;
-    @apply hidden;
-
-    img {
-      @apply block absolute;
-      @apply max-h-screen max-w-full;
-      @apply p-5;
-    }
-  }
-
-  .modal-active {
-    @apply flex;
-  }
-
-  ul {
-    @apply list-disc;
-    @apply mx-8;
-  }
-
-  code {
-    @apply text-emerald-400;
   }
 }
