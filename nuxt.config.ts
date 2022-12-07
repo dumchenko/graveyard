@@ -1,13 +1,12 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    buildModules: [
-        "@nuxtjs/google-analytics",
-        "@nuxtjs/google-fonts",
-        "nuxt-purgecss",
-    ],
+    build: {
+        analyze: true,
+    },
     modules: [
         "@nuxt/content",
         "@nuxtjs/tailwindcss",
+        "nuxt-purgecss",
     ],
     content: {
         documentDriven: true,
@@ -15,8 +14,10 @@ export default defineNuxtConfig({
     css: [
         "@/assets/style/app.scss",
     ],
-    googleAnalytics: {
-        id: "G-GCRK2384VQ",
+    plugins: [
+        "~/plugins/google-analytics.js",
+    ],
+    typescript: {
+        strict: true,
     },
-    target: "static",
 })
