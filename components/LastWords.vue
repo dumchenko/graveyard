@@ -16,16 +16,18 @@ const toggleModal = (context: PointerEvent) => {
       Последние слова от семьи
     </h2>
 
-    <div class="mx-auto columns-1 gap-6">
+    <div class="columns-1 gap-6">
       <div v-for="item in items" class="column">
-        <div class="card">
+        <div class="card card-link btn btn-gray">
           <a @click="toggleModal">
             <h5 class="card-title">
               {{ ('relation' in item) ? `${item.author}, ${item.relation}` : item.author }}
             </h5>
 
-            <div class="modal text-left">
-              <ContentRenderer :value="item"/>
+            <div class="modal">
+              <div class="text-left max-w-[90%] lg:max-w-[50%] text-xs sm:text-base lg:text-xl">
+                <ContentRenderer :value="item"/>
+              </div>
             </div>
           </a>
         </div>

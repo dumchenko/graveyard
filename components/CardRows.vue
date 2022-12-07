@@ -6,7 +6,9 @@ const slots = useSlots()
   <div class="container mx-auto">
     <div class="columns-auto gap-6">
       <div v-for="item in items" class="column">
-          <div class="card">
+          <div
+              :class="{card: true, 'card-link': !disableLinks}"
+          >
             <slot name="image" v-bind="item"/>
             <h5 v-if="!!slots.title" class="card-title">
               <slot name="title" v-bind="item"/>
