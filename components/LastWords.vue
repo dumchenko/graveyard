@@ -1,48 +1,48 @@
+<script lang="ts" setup>
+const toggleModal = (context: PointerEvent) => {
+  const parent: EventTarget = context.currentTarget.parentElement
+  const modal = parent.querySelector("div.modal")
+  if (modal.classList.contains("modal-active")) {
+    modal.classList.remove("modal-active")
+  } else {
+    modal.classList.add("modal-active")
+  }
+}
+</script>
+
 <template>
-  <div class="container bg-body rounded d-grid gap-5">
-    <h3 class="text-center display-4">
+  <div class="container">
+    <h2 class="text-center">
       Последние слова от семьи
-    </h3>
+    </h2>
 
-    <nav class="p2">
-      <div class="nav nav-tabs bg-transparent flex-column d-grid gap-3" id="nav-tab" role="tablist">
-        <button
-            v-for="item in items"
-            class="nav-link border rounded shadow p-2"
-            v-bind:id="`nav-${ item.title }-tab`"
-            data-bs-toggle="tab"
-            v-bind:data-bs-target="`#${ item.title }-tab`"
-            type="button"
-            role="tab"
-            v-bind:aria-controls="`nav-${ item.title }`"
-            aria-selected="false"
-            >
-          {{ ('relation' in item) ? `${item.author}, ${item.relation}` : item.author }}
-        </button>
-      </div>
-    </nav>
+    <div class="mx-auto columns-1 gap-6">
+      <div v-for="item in items" class="column">
+        <div class="card">
+          <a @click="toggleModal">
+            <h5 class="card-title">
+              {{ ('relation' in item) ? `${item.author}, ${item.relation}` : item.author }}
+            </h5>
 
-    <div class="tab-content">
-      <div
-          v-for="item in items"
-          class="tab-pane fade"
-          :id="`${item.title}-tab`"
-          role="tabpanel"
-          v-bind:aria-labelledby="`nav-${ item.title }-tab`">
-        <div class="fw-light">
-          <ContentRenderer :value="item" />
+            <div class="modal text-left">
+              <ContentRenderer :value="item"/>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "LastWords",
   props: {
     items: {
-      type: Array[Object],
+      type: Array < {
+        author: String,
+        relation: String,
+      } >,
       required: true,
     },
   },

@@ -74,6 +74,6 @@ const buried = [
     <h2 class="text-center">
       Фотографии
     </h2>
-    <Carousel :photos="page.photos" :id="pageID"/>
+    <Gallery :photos="page.photos" :id="page.title.toLowerCase()" />
   </div>
 </template>
