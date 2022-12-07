@@ -46,7 +46,6 @@ const buried = [
         <img
             v-if="'photos' in item"
             :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`"
-            class="img-fluid rounded"
             >
       </template>
 
