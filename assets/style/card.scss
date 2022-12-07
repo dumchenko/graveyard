@@ -1,0 +1,36 @@
+@layer base {
+  .card {
+    @apply block;
+    @apply border border-solid border-slate-700;
+    @apply rounded-2xl;
+    @apply shadow-2xl;
+    @apply max-w-xs;
+
+    @apply relative; // for stretched links to work
+
+    @apply text-center;
+
+    img {
+      @apply rounded-t-2xl;
+    }
+
+    .card-title:not(:empty) {
+      @apply mt-4;
+      @apply px-10 pb-2;
+
+      @apply text-2xl;
+    }
+
+    .card-text:not(:empty) {
+      @apply m-2;
+    }
+
+    a {
+      @apply rounded-t-none;
+    }
+  }
+
+  .card-link {
+    @apply cursor-pointer;
+  }
+}
