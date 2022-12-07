@@ -15,14 +15,13 @@ const toggleModal = (context: PointerEvent) => {
     <template #image="item">
       <a @click="toggleModal">
         <img
+            :class="{'rounded-b-2xl': !('caption' in item)}"
             :src="`/images/${id}/${item.path}`"
-            class="img-fluid rounded"
         >
 
         <div class="modal">
           <img
               :src="`/images/${id}/${item.path}`"
-              class="img-fluid rounded"
           >
         </div>
       </a>

@@ -11,7 +11,7 @@ const graveyards = await queryContent("graveyards").where({_partial: false}).fin
 
     <CardRows :items="people">
       <template #image="item">
-        <img :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`" class="img-fluid rounded">
+        <img :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`">
       </template>
 
       <template #title="item">
