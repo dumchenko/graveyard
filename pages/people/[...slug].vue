@@ -1,18 +1,20 @@
 <template>
-  <NavBar/>
-  <div class="container mx-auto">
-    <NuxtLayout>
-      <ContentDoc/>
-    </NuxtLayout>
+  <div>
+    <NavBar />
+    <div class="container mx-auto">
+      <NuxtLayout>
+        <ContentDoc />
+      </NuxtLayout>
+    </div>
+    <Footer />
   </div>
-  <Footer/>
 </template>
 
-<script setup>
+<script setup lang="ts">
 definePageMeta({
-  layout: "person",
+  layout: 'person',
   middleware: [
-    'redirect-html',
-  ],
+    'redirect-html'
+  ]
 })
 </script>
