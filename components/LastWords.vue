@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const toggleModal = (context: PointerEvent) => {
   const parent: EventTarget = context.currentTarget.parentElement
-  const modal = parent.querySelector("div.modal")
-  if (modal.classList.contains("modal-active")) {
-    modal.classList.remove("modal-active")
+  const modal = parent.querySelector('div.modal')
+  if (modal.classList.contains('modal-active')) {
+    modal.classList.remove('modal-active')
   } else {
-    modal.classList.add("modal-active")
+    modal.classList.add('modal-active')
   }
 }
 </script>
@@ -26,7 +26,7 @@ const toggleModal = (context: PointerEvent) => {
 
             <div class="modal">
               <div class="text-left max-w-[90%] lg:max-w-[50%] text-xs sm:text-base lg:text-xl">
-                <ContentRenderer :value="item"/>
+                <ContentRenderer :value="item" />
               </div>
             </div>
           </a>
@@ -38,15 +38,15 @@ const toggleModal = (context: PointerEvent) => {
 
 <script lang="ts">
 export default {
-  name: "LastWords",
+  name: 'LastWords',
   props: {
     items: {
       type: Array < {
         author: String,
         relation: String,
       } >,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>

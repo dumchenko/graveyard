@@ -1,15 +1,19 @@
 <template>
   <header>
     <nav>
-        <a class="navbar-brand" href="/">
-          Место упокоения семьи Думченко
-        </a>
+      <NuxtLink
+        class="navbar-brand"
+        to="/"
+        prefetch
+      >
+        Место упокоения семьи Думченко
+      </NuxtLink>
     </nav>
   </header>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "NavBar"
+  name: 'NavBar'
 }
 </script>
