@@ -4,8 +4,8 @@
   </p>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "Alert",
+  name: 'Alert'
 }
 </script>
