@@ -1,6 +1,7 @@
 @layer base {
   html {
     @apply antialiased;
+    @apply font-sans;
   }
 
   header, footer {
