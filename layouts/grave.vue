@@ -42,10 +42,14 @@ const buried = [
 
       <CardRows :items="buried">
         <template #image="item">
-          <img
+          <nuxt-img
+            format="webp"
+            quality="80"
             v-if="'photos' in item"
             :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`"
-          >
+            placeholder
+            preload
+          />
         </template>
 
         <template #title="item">
