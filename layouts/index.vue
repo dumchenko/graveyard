@@ -12,7 +12,13 @@ const graveyards = await queryContent('graveyards').where({ _partial: false }).f
 
       <CardRows :items="people">
         <template #image="item">
-          <img :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`">
+          <nuxt-img
+            format="webp"
+            quality="80"
+            :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`"
+            placeholder
+            preload
+          />
         </template>
 
         <template #title="item">
