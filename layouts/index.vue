@@ -1,6 +1,16 @@
 <script setup lang="ts">
-const people = await queryContent('people').where({ _partial: false }).find()
-const graveyards = await queryContent('graveyards').where({ _partial: false }).find()
+const { data: people } = await useAsyncData('people', () => queryContent('people').where({ _partial: false }).find(), {
+  lazy: true,
+  default: () => []
+})
+const { data: graveyards } = await useAsyncData('graveyards', () => queryContent('graveyards').where({ _partial: false }).find(), {
+  lazy: true,
+  default: () => []
+})
+
+useHead({
+  title: 'Место упокоения семьи Думченко'
+})
 </script>
 
 <template>
@@ -12,11 +22,11 @@ const graveyards = await queryContent('graveyards').where({ _partial: false }).f
 
       <CardRows :items="people">
         <template #image="item">
-          <img :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`">
+          <img :src="`/images/${item._path.split('/').slice(-1)}/${item.photos[0].path}`">
         </template>
 
         <template #title="item">
-          {{ item.name }}
+          {{ item.title }}
         </template>
 
         <template #text="item">
@@ -38,7 +48,7 @@ const graveyards = await queryContent('graveyards').where({ _partial: false }).f
 
       <CardRows :items="graveyards">
         <template #title="item">
-          {{ item.name }}
+          {{ item.title }}
         </template>
       </CardRows>
     </div>

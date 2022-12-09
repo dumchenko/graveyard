@@ -10,9 +10,9 @@ const slots = useSlots()
           :class="{card: true, 'card-link': !disableLinks}"
         >
           <slot name="image" v-bind="item" />
-          <h5 v-if="!!slots.title" class="card-title">
+          <p v-if="!!slots.title" class="card-title">
             <slot name="title" v-bind="item" />
-          </h5>
+          </p>
           <div v-if="!!slots.text" class="card-text">
             <slot name="text" v-bind="item" />
           </div>

@@ -6,22 +6,24 @@ const pageID = params.slug[0]
 const pathParts = path.split('/')
 pathParts.shift()
 
-const directions = await queryContent(...pathParts).where({
+const { data: directions } = await useAsyncData('directions', () => queryContent(...pathParts).where({
   title: 'Directions',
   _partial: true,
   _type: 'markdown'
-}).findOne()
+}).findOne(), { lazy: true })
 
 const buried = [
   ...(('buried' in page.value) ? page.value.buried : []),
-  ...(await queryContent('people').where({ grave: pageID }).find())
+  ...await queryContent('people').where({ grave: pageID }).find()
 ]
+
+useContentHead(page)
 </script>
 
 <template>
   <div>
     <div class="container text-center">
-      <h1>{{ page.name }}</h1>
+      <h1>{{ page.title }}</h1>
       <br>
     </div>
 
@@ -44,12 +46,12 @@ const buried = [
         <template #image="item">
           <img
             v-if="'photos' in item"
-            :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`"
+            :src="`/images/${item._path.split('/').slice(-1)}/${item.photos[0].path}`"
           >
         </template>
 
         <template #title="item">
-          {{ item.name }}
+          {{ item.title }}
         </template>
 
         <template #text="item">
