@@ -22,7 +22,13 @@ useHead({
 
       <CardRows :items="people">
         <template #image="item">
-          <img :src="`/images/${item._path.split('/').slice(-1)}/${item.photos[0].path}`" loading="lazy">
+          <NuxtPicture
+            format="webp"
+            quality="80"
+            :src="`/images/${item.title.toLowerCase()}/${item.photos[0].path}`"
+            :src="`/images/${item._path.split('/').slice(-1)}/${item.photos[0].path}`"
+            loading="lazy"
+          />
         </template>
 
         <template #title="item">
