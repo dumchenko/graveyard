@@ -5,13 +5,15 @@ pathParts.shift()
 
 const { page } = useContent()
 const pageID = useRoute().params.slug[0]
-const graves = await queryContent('graves').where({ graveyard: pageID }).find()
+const { data: graves } = await useAsyncData('graves', () => queryContent('graves').where({ graveyard: pageID }).find(), { lazy: true, default: () => [] })
+
+useContentHead(page)
 </script>
 
 <template>
   <div>
     <div class="container text-center">
-      <h1>{{ page.name }}</h1>
+      <h1>{{ page.title }}</h1>
       <br>
     </div>
 
@@ -68,7 +70,7 @@ const graves = await queryContent('graves').where({ graveyard: pageID }).find()
 
       <CardRows :items="graves">
         <template #title="item">
-          {{ item.name }}
+          {{ item.title }}
         </template>
       </CardRows>
     </div>
