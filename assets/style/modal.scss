@@ -6,7 +6,7 @@
     @apply hidden;
 
     img {
-      @apply block absolute;
+      @apply block;
       @apply max-h-screen max-w-full;
       @apply p-5;
     }

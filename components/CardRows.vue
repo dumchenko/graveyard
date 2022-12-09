@@ -20,7 +20,6 @@ const slots = useSlots()
             v-if="'_path' in item && !disableLinks"
             class="btn stretched-link"
             :to="`${item._path}`"
-            prefetch
           >
             Подробнее...
           </NuxtLink>
