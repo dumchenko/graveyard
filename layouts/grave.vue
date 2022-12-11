@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const { page } = useContent()
 const { path, params } = useRoute()
-const pageID = params.slug[0]
+const pageID = params.slug[1]
 
 const pathParts = path.split('/')
 pathParts.shift()
 
-const { data: directions } = await useAsyncData('directions', () => queryContent(...pathParts).where({
+const { data: directions } = await useAsyncData('directions', () => queryContent('', ...pathParts).where({
   title: 'Directions',
   _partial: true,
   _type: 'markdown'
@@ -74,7 +74,7 @@ useContentHead(page)
       <h2 class="text-center">
         Фотографии
       </h2>
-      <Gallery :id="page.title.toLowerCase()" :photos="page.photos" />
+      <Gallery :id="pageID" :photos="page.photos" />
     </div>
   </div>
 </template>

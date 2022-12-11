@@ -2,15 +2,15 @@
 const { path, params } = useRoute()
 const pathParts = path.split('/')
 pathParts.shift()
-const pageID = params.slug[0]
+const pageID = params.slug[1]
 
 const { page } = useContent()
-const { data: lastWords } = await useAsyncData('lastWords', () => queryContent(...pathParts).where({
+const { data: lastWords } = await useAsyncData('lastWords', () => queryContent('', ...pathParts).where({
   _partial: true,
   _dir: '_last_words',
   _type: 'markdown'
 }).find(), { lazy: true, default: () => [] })
-const { data: memories } = await useAsyncData('memories', () => queryContent(...pathParts).where({
+const { data: memories } = await useAsyncData('memories', () => queryContent('', ...pathParts).where({
   _partial: true,
   _dir: '_memories',
   _type: 'markdown'
