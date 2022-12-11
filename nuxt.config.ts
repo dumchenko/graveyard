@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     '@/assets/style/app.scss'
   ],
   plugins: [
-    '~/plugins/google-analytics.js'
+    '~/plugins/google-analytics.ts'
   ],
   typescript: {
     strict: true
