@@ -33,8 +33,5 @@ export default defineNuxtConfig({
   ],
   typescript: {
     strict: true
-  },
-  image: {
-    provider: 'static'
   }
 })
