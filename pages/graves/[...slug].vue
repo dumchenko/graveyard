@@ -12,9 +12,6 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'grave',
-  middleware: [
-    'redirect-html'
-  ]
+  layout: 'grave'
 })
 </script>
