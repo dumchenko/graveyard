@@ -1,4 +1,3 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
     pageTransition: {
@@ -33,5 +32,6 @@ export default defineNuxtConfig({
   ],
   typescript: {
     strict: true
-  }
+  },
+  ssr: false
 })

@@ -49,8 +49,9 @@ export default defineNuxtComponent({
   name: 'Gallery',
   props: {
     id: String,
-    photos: Array < {
+    photos: Array< {
       path: String,
+      caption: String,
     } >
   }
 })
