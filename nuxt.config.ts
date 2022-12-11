@@ -11,7 +11,10 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: {
         lang: 'ru'
-      }
+      },
+      meta: [
+        { name: 'description', content: 'E-graveyard for Dumchenko family' }
+      ]
     }
   },
   build: {

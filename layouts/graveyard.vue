@@ -5,7 +5,7 @@ pathParts.shift()
 
 const { page } = useContent()
 const pageID = useRoute().params.slug[1]
-const { data: graves } = await useAsyncData('graves', () => queryContent('graves').where({ graveyard: pageID }).find(), {
+const { data: graves } = useAsyncData('graves', () => queryContent('graves').where({ graveyard: pageID }).find(), {
   lazy: true,
   default: () => []
 })
