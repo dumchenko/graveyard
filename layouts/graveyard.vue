@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const {path} = useRoute()
+const { path } = useRoute()
 const pathParts = path.split('/')
 pathParts.shift()
 
-const {page} = useContent()
+const { page } = useContent()
 const pageID = useRoute().params.slug[1]
-const {data: graves} = await useAsyncData('graves', () => queryContent('graves').where({graveyard: pageID}).find(), {
+const { data: graves } = await useAsyncData('graves', () => queryContent('graves').where({ graveyard: pageID }).find(), {
   lazy: true,
   default: () => []
 })
@@ -40,18 +40,18 @@ const toggleYandex = () => {
       <div class="container">
         <div class="columns-auto gap-20">
           <button
-              v-if="'yandex' in page.maps"
-              class="btn"
-              type="button"
-              @click="toggleYandex"
+            v-if="'yandex' in page.maps"
+            class="btn"
+            type="button"
+            @click="toggleYandex"
           >
             Яндекс Карты
           </button>
           <button
-              v-if="'google' in page.maps"
-              class="btn"
-              type="button"
-              @click="toggleGoogle"
+            v-if="'google' in page.maps"
+            class="btn"
+            type="button"
+            @click="toggleGoogle"
           >
             Google Maps
           </button>
@@ -59,18 +59,18 @@ const toggleYandex = () => {
 
         <div class="flex mx-auto justify-center max-w-[80%]">
           <iframe
-              v-if="'yandex' in page.maps && !yandexHidden"
-              :src="page.maps.yandex"
-              class="aspect-[4/3] w-full"
-              loading="lazy"
-              allowfullscreen
+            v-if="'yandex' in page.maps && !yandexHidden"
+            :src="page.maps.yandex"
+            class="aspect-[4/3] w-full"
+            loading="lazy"
+            allowfullscreen
           />
           <iframe
-              v-if="'google' in page.maps && !googleHidden"
-              :src="page.maps.google"
-              class="aspect-[4/3] w-full"
-              loading="lazy"
-              allowfullscreen
+            v-if="'google' in page.maps && !googleHidden"
+            :src="page.maps.google"
+            class="aspect-[4/3] w-full"
+            loading="lazy"
+            allowfullscreen
           />
         </div>
       </div>
