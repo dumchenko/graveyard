@@ -12,9 +12,6 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'person',
-  middleware: [
-    'redirect-html'
-  ]
+  layout: 'person'
 })
 </script>

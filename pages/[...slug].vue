@@ -12,9 +12,6 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'index',
-  middleware: [
-    'redirect-html'
-  ]
+  layout: 'index'
 })
 </script>
