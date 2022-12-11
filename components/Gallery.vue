@@ -26,11 +26,13 @@ const toggleModal = (context: PointerEvent) => {
         <img
           :class="{'rounded-b-2xl': !('caption' in item)}"
           :src="`/images/${id}/${item.path}`"
+          loading="lazy"
         >
 
         <div class="modal">
           <img
             :src="`/images/${id}/${item.path}`"
+            loading="lazy"
           >
         </div>
       </a>

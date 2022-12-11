@@ -6,7 +6,7 @@ const pageID = params.slug[1]
 const pathParts = path.split('/')
 pathParts.shift()
 
-const { data: directions } = await useAsyncData('directions', () => queryContent('', ...pathParts).where({
+const { data: directions } = useAsyncData('directions', () => queryContent('', ...pathParts).where({
   title: 'Directions',
   _partial: true,
   _type: 'markdown'
@@ -47,6 +47,7 @@ useContentHead(page)
           <img
             v-if="'photos' in item"
             :src="`/images/${item._path.split('/').slice(-1)}/${item.photos[0].path}`"
+            loading="lazy"
           >
         </template>
 
