@@ -1,1 +1,0 @@
-import{a as t,h as n,r}from"./entry.fa9c32bf.js";const o=n({props:{code:{type:String,default:""},language:{type:String,default:null},filename:{type:String,default:null},highlights:{type:Array,default:()=>[]}}});function a(e,s,l,d,p,u){return r(e.$slots,"default")}const f=t(o,[["render",a]]);export{f as default};
