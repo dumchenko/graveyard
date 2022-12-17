@@ -36,5 +36,8 @@ export default defineNuxtConfig({
   ],
   typescript: {
     strict: true
+  },
+  image: {
+    // dir: 'assets/images'
   }
 })
