@@ -44,10 +44,8 @@ useContentHead(page)
 
       <CardRows :items="buried">
         <template #image="item">
-          <NuxtPicture
+          <nuxt-picture
             v-if="'photos' in item"
-            format="webp"
-            quality="80"
             :src="`/images/${item._path.split('/').slice(-1)}/${item.photos[0].path}`"
             loading="lazy"
           />
