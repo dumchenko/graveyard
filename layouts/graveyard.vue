@@ -20,7 +20,6 @@ const toggleGoogle = () => {
   yandexHidden.value = true
 }
 const toggleYandex = () => {
-  console.log('toggle yandex')
   yandexHidden.value = !yandexHidden.value
   googleHidden.value = true
 }
