@@ -23,16 +23,14 @@ const toggleModal = (context: PointerEvent) => {
   <CardRows :items="photos">
     <template #image="item">
       <a @click="toggleModal">
-        <NuxtPicture
-          format="webp"
-          quality="80"
+        <nuxt-picture
           :class="{'rounded-b-2xl': !('caption' in item)}"
           :src="`/images/${id}/${item.path}`"
           loading="lazy"
         />
 
         <div class="modal">
-          <NuxtPicture
+          <nuxt-picture
             :src="`/images/${id}/${item.path}`"
             loading="lazy"
           />
