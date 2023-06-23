@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as o,r,n as a}from"./entry.babc7773.js";const n={name:"Alert"},c={class:a(["alert"])};function l(e,_,p,d,f,i){return t(),o("p",c,[r(e.$slots,"default")])}const u=s(n,[["render",l]]);export{u as default};
