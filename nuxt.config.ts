@@ -38,6 +38,6 @@ export default defineNuxtConfig({
     strict: true
   },
   image: {
-    // dir: 'assets/images'
+    dir: 'assets'
   }
 })
