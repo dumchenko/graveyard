@@ -22,7 +22,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/content',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image'
   ],
   content: {
     documentDriven: true
@@ -35,5 +36,8 @@ export default defineNuxtConfig({
   ],
   typescript: {
     strict: true
+  },
+  image: {
+    dir: 'assets'
   }
 })

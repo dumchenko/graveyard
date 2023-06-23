@@ -44,11 +44,11 @@ useContentHead(page)
 
       <CardRows :items="buried">
         <template #image="item">
-          <img
+          <nuxt-picture
             v-if="'photos' in item"
             :src="`/images/${item._path.split('/').slice(-1)}/${item.photos[0].path}`"
             loading="lazy"
-          >
+          />
         </template>
 
         <template #title="item">
