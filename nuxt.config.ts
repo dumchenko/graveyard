@@ -39,5 +39,10 @@ export default defineNuxtConfig({
   },
   image: {
     dir: 'assets'
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
   }
 })
