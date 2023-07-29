@@ -6,7 +6,8 @@ export default defineEventHandler(async (event) => {
   const docs = await serverQueryContent(event).where({ _partial: false }).find()
 
   const sitemap = new SitemapStream({
-    hostname: `https://${event.node.req.headers.host}`
+    // hostname: `https://${event.node.req.headers.host}`
+    hostname: 'https://graveyard.dumchenko.family'
   })
 
   for (const doc of docs) {
