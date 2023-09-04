@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as o,z as a,A as r}from"./entry.e15fab77.js";const n={name:"Alert"},c={class:r(["alert"])};function l(e,_,p,d,f,i){return t(),o("p",c,[a(e.$slots,"default")])}const u=s(n,[["render",l]]);export{u as default};
